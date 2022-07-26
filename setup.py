@@ -10,7 +10,7 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = [ ]
+requirements = ["sklearn", "numpy", "scipy", "matplotlib", "pandas", "imblearn"]
 
 test_requirements = ['pytest>=3', ]
 
@@ -36,6 +36,7 @@ setup(
     keywords='evoml',
     name='evoml',
     packages=find_packages(include=['evoml', 'evoml.*']),
+    package_data={"evoml.*":["*.csv"]},
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/housecricket/evoml',
